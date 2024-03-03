@@ -1,0 +1,39 @@
+# config.yml
+
+# Discord Bot authentication token. Keep this value secret.
+token: "Discord Token Here"
+
+# List of channel-specific API configurations that the Discord Bot will respond to.
+api-channel-configs:
+  # Example API configuration
+  - 
+    # URL of the target API.
+    api-url: "http://localhost:8080/api/chat/v2"
+    
+    # API authentication token. Set this if the API requires authentication. Optional.
+    # If the token is not required, you can leave this line blank or remove it.
+    api-auth-token: ""  
+    
+    # Name of the model to use. Different models can be specified for different APIs.
+    model-name: "llama2:7b"
+    
+    # System role messages. Custom messages to instruct specific behaviors to the API.
+    # This setting is optional.
+    system-role-messages: 
+      - "Become a cat"
+      - "The cry is meow"
+    
+    # ID of the Discord channel that this bot will respond to.
+    chat-channel-id: "Discord Channel ID Here"
+
+  # Example of a second API configuration. Multiple configurations can be included in the same file.
+  - 
+    api-url: "http://localhost:8080/api/chat/v2"
+    api-auth-token: ""  
+    model-name: "llama2:13b"
+    system-role-messages:
+      - "Become a cat"
+      - "The cry is meow"
+    chat-channel-id: "Discord Channel ID Here"
+
+# Note: The tokens and IDs included in this file are sensitive information. Ensure secure management of the file.
